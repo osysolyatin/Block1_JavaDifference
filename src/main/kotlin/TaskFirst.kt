@@ -9,7 +9,7 @@ fun main() {
         val amount = 100_000
         val commission =
             if (amount * 100 * TRANSACTION_COMMISSION > MIN_COMMISSION * 100) (amount * 100 * TRANSACTION_COMMISSION).toInt() else (MIN_COMMISSION * 100)
-        println("Размер комиссии составит: ${commission / 100} рублей")
+        println("Размер комиссии составит: $commission копеек")
         println("Суммарный платеж, с учетом комиссии составит: ${(amount + (commission / 100))} рублей")
         amountPerMonth += amount
     } else println("Вы превысили месячный лимит переводов")
